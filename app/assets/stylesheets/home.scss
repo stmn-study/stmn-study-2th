@@ -17,7 +17,7 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  background-color: #FAFAFA;
+  background-color: #fafafa;
   font-family: 'Roboto';
 }
 
@@ -27,7 +27,6 @@ html, body {
   background-size: cover;
   position: relative;
   z-index: 1;
-  background: url("https://images.unsplash.com/photo-1451444635319-e5e247fbb88d?ixlib=rb-0.3.5&q=80&fm=jpg") no-repeat center center fixed;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -48,7 +47,7 @@ html, body {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: rgba(51, 61, 221, 0.8);
+  background-color: rgba(0, 0, 0, 0.8);
   left: 0;
   top: 0;
 }
@@ -143,13 +142,13 @@ h2 {
   font-size: 32px;
   -webkit-transform: translateY(2px);
   transform: translateY(2px);
-  color: #bbbbbb;
+  color: #bbb;
   -webkit-transition: .1s;
   transition: .1s;
 }
 
 #player .player-song .actions i:hover {
-  color: #888888;
+  color: #888;
   -webkit-transition: .1s;
   transition: .1s;
 }
@@ -171,7 +170,7 @@ progress[value]::-webkit-progress-bar {
 
 progress[value]::-webkit-progress-value {
   border-radius: 50px;
-  background-color: #333DDD;
+  background-color: #333ddd;
 }
 
 .play-button {
@@ -184,13 +183,13 @@ progress[value]::-webkit-progress-value {
 }
 
 .play-button:hover .left, .play-button:hover .right {
-  background-color: #888888;
+  background-color: #888;
 }
 
 .left {
   height: 100%;
   float: left;
-  background-color: #bbbbbb;
+  background-color: #bbb;
   width: 36%;
   -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
@@ -228,7 +227,7 @@ progress[value]::-webkit-progress-value {
   height: 100%;
   float: right;
   width: 36%;
-  background-color: #bbbbbb;
+  background-color: #bbb;
   -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
