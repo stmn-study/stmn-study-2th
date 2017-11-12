@@ -33,6 +33,9 @@ gem 'bootstrap', '~> 4.0.0.alpha5'
 gem 'google-api-client', '>0.7'
 gem 'trollop'
 
+# JQuery
+gem 'jquery-rails'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

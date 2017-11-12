@@ -101,6 +101,8 @@ class YoutubeDataApi
           end
         end
 
+        results = {videos: videos, channels: channels, playlists: playlists}
+        results
       rescue Google::APIClient::TransmissionError => e
         logger.debug(e.message)
       end
