@@ -30,4 +30,32 @@
       </div>
     </div>
   </div>
+
+  <div id="search">
+    <div class="row">
+      <%= form_tag root_path, method: 'get', class: "form-inline" do %>
+        <div class="form-inline">
+          <div class="form-group">
+            <%= text_field_tag :q, params[:q], class: "form-control", placeholder: "キーワード", size: 35 %>
+          </div>
+
+          <div class="form-group">
+
+          </div>
+
+          <button type="submit" class="button">検索</button>
+        </div>
+      <% end %>
+
+      <% if @results.present? %>
+        <div class="results">
+          <ul class="list-group">
+            <% @results.each do |result| %>
+              <li class="list-group-item"><%= result %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+    </div>
+  </div>
 </div>

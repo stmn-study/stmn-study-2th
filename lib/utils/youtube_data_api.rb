@@ -70,9 +70,11 @@ class YoutubeDataApi
     end
 
     def search(params = {})
+      params = {q: nil, max_results: 25}.merge(params.symbolize_keys)
+
       opts = Trollop::options do
-        opt :q, 'Search term', :type => String, :default => 'Google'
-        opt :max_results, 'Max results', :type => :int, :default => 25
+        opt :q, 'Search term', :type => String, :default => params[:q]
+        opt :max_results, 'Max results', :type => :int, :default => params[:max_results]
       end
 
       client, youtube = get_service
