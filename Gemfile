@@ -30,7 +30,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootstrap', '~> 4.0.0.alpha5'
 
 # Google_api_client for Youtube_data_api
-gem 'google-api-client', '>0.7'
+gem 'google-api-client', '0.8'
 gem 'trollop'
 
 # JQuery

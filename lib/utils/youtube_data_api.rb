@@ -1,8 +1,9 @@
+require 'rubygems'
 require 'google/api_client'
 require 'trollop'
 
 class YoutubeDataApi
-  DEVELOPER_KEY = 'REPLACE_ME'
+  DEVELOPER_KEY = Rails.application.secrets.youtube_data_api_key
   YOUTUBE_API_SERVICE_NAME = 'youtube'
   YOUTUBE_API_VERSION = 'v3'
 
