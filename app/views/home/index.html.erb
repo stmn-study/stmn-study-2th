@@ -3,7 +3,7 @@
   <h2>by stmn</h2>
   <audio src="" id="hidden-player"></audio>
   <div id="player">
-    <img src="" class="coverr" alt="" height="200" width="200" />
+    <%= image_tag "http://i.ytimg.com/vi/Soa3gO7tL-c/hqdefault.jpg", size:"180x180" %>
     <div class="player-song">
       <div class="title"></div>
       <div class="artist"></div>
@@ -32,30 +32,41 @@
   </div>
 
   <div id="search">
-    <div class="row">
+    <div>
       <%= form_tag root_path, method: 'get', class: "form-inline" do %>
         <div class="form-inline">
           <div class="form-group">
             <%= text_field_tag :q, params[:q], class: "form-control", placeholder: "キーワード", size: 35 %>
           </div>
 
-          <div class="form-group">
-
-          </div>
-
           <button type="submit" class="button">検索</button>
         </div>
       <% end %>
 
-      <% if @results.present? %>
-        <div class="results">
-          <ul class="list-group">
-            <% @results.each do |result| %>
-              <li class="list-group-item"><%= result %></li>
-            <% end %>
-          </ul>
-        </div>
-      <% end %>
+      <div class="results">
+        <ul class="list-group">
+          <li class="result_item">
+            <%= image_tag "http://i.ytimg.com/vi/NUTGr5t3MoY/hqdefault.jpg", class: "video-thumbnail", size:"120x90" %>
+            <div class="video-description">
+              <%= 'Basket Case[Official MV]' %>
+            </div>
+          </li>
+
+          <li class="result_item">
+            <%= image_tag "http://i.ytimg.com/vi/Soa3gO7tL-c/hqdefault.jpg", class: "video-thumbnail", size:"120x90" %>
+            <div class="video-description">
+              <%= 'Boulevard Of  Broken Dreams[Official MV]' %>
+            </div>
+          </li>
+
+          <li class="result_item">
+            <%= image_tag "http://i.ytimg.com/vi/Ee_uujKuJMI/hqdefault.jpg", class: "video-thumbnail", size:"120x90" %>
+            <div class="video-description">
+              <%= 'American Idiot[Official MV]' %>
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </div>

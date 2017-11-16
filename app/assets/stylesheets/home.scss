@@ -188,6 +188,7 @@ progress[value]::-webkit-progress-value {
 
 #search .form-inline {
   display: flex;
+  margin: auto;
 }
 
 #search .form-control {
@@ -222,6 +223,22 @@ progress[value]::-webkit-progress-value {
 }
 
 #search .results {
+  margin: 20px;
+}
+
+#search .result_item {
+  margin: 10px;
+  display: flex;
+}
+
+#search img.video-thumbnail {
+  border: 1px solid white;
+  border-radius: 4px;
+  background-color: white;
+  padding: 5px;
+}
+
+#search .video-description {
   margin: 10px;
 }
 
