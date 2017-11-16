@@ -45,26 +45,14 @@
 
       <div class="results">
         <ul class="list-group">
-          <li class="result_item">
-            <%= image_tag "http://i.ytimg.com/vi/NUTGr5t3MoY/hqdefault.jpg", class: "video-thumbnail", size:"120x90" %>
-            <div class="video-description">
-              <%= 'Basket Case[Official MV]' %>
-            </div>
-          </li>
-
-          <li class="result_item">
-            <%= image_tag "http://i.ytimg.com/vi/Soa3gO7tL-c/hqdefault.jpg", class: "video-thumbnail", size:"120x90" %>
-            <div class="video-description">
-              <%= 'Boulevard Of  Broken Dreams[Official MV]' %>
-            </div>
-          </li>
-
-          <li class="result_item">
-            <%= image_tag "http://i.ytimg.com/vi/Ee_uujKuJMI/hqdefault.jpg", class: "video-thumbnail", size:"120x90" %>
-            <div class="video-description">
-              <%= 'American Idiot[Official MV]' %>
-            </div>
-          </li>
+          <% @results.each do |result| %>
+            <li class="result_item">
+              <%= image_tag "http://i.ytimg.com/vi/#{result[:video_id]}/hqdefault.jpg", class: "video-thumbnail", size:"120x90" %>
+              <div class="video-description">
+                <%= "#{result[:title]}" %>
+              </div>
+            </li>
+          <% end %>
         </ul>
       </div>
     </div>
