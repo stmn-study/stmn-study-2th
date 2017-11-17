@@ -2,33 +2,8 @@
   <h1>BLUST</h1>
   <h2>by stmn</h2>
   <audio src="" id="hidden-player"></audio>
-  <div id="player">
-    <%= image_tag "http://i.ytimg.com/vi/Soa3gO7tL-c/hqdefault.jpg", size:"180x180" %>
-    <div class="player-song">
-      <div class="title"></div>
-      <div class="artist"></div>
-      <progress value="0" max="1"></progress>
-      <div class="timestamps">
-        <div class="time-now">0:00:00</div>
-        <div class="time-finish">0:00:00</div>
-      </div>
-      <div class="actions">
-        <div class="prev">
-          <i class="material-icons">fast_rewind</i>
-        </div>
-        <div class="play">
-          <a class="play-button paused" href="#">
-            <div class="left"></div>
-            <div class="right"></div>
-            <div class="triangle-1"></div>
-            <div class="triangle-2"></div>
-          </a>
-        </div>
-        <div class="next">
-          <i class="material-icons">fast_forward</i>
-        </div>
-      </div>
-    </div>
+  <div id="video">
+    <iframe class="video" id="popup-YouTube-player" width="560" height="315" src="https://www.YouTube.com/embed/<%= "#{@video}" %>?enablejsapi=1" frameborder="0" allowfullscreen></iframe>
   </div>
 
   <div id="search">
@@ -46,12 +21,14 @@
       <div class="results">
         <ul class="list-group">
           <% @results.each do |result| %>
-            <li class="result_item">
-              <%= image_tag "http://i.ytimg.com/vi/#{result[:video_id]}/hqdefault.jpg", class: "video-thumbnail", size:"120x90" %>
-              <div class="video-description">
-                <%= "#{result[:title]}" %>
-              </div>
-            </li>
+            <%= link_to root_path(video_id: result[:video_id]) do %>
+              <li class="result_item">
+                <%= image_tag "http://i.ytimg.com/vi/#{result[:video_id]}/hqdefault.jpg", class: "video-thumbnail", size: "120x90" %>
+                <div class="video-description">
+                  <%= "#{result[:title]}" %>
+                </div>
+              </li>
+            <% end %>
           <% end %>
         </ul>
       </div>

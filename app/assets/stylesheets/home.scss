@@ -70,6 +70,19 @@ h2 {
   margin-top: -10px;
 }
 
+#video {
+  position: relative;
+  z-index: 2;
+  width: 600px;
+  margin: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 #player {
   position: relative;
   z-index: 2;
@@ -85,7 +98,7 @@ h2 {
 #player img {
   position: absolute;
   left: 15px;
-  top: -25px;
+  top: -15px;
   border-radius: 10px;
 }
 
