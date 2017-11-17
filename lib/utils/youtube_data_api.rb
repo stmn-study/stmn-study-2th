@@ -96,7 +96,7 @@ class YoutubeDataApi
         search_response.data.items.each do |search_result|
           case search_result.id.kind
             when 'youtube#video'
-              videos << {title: search_result.snippet.title, video_id: search_result.id.videoId}
+              videos << {title: search_result.snippet.title, video_id: search_result.id.videoId, published_at: search_result.snippet.publishedAt, channel_title: search_result.snippet.channelTitle}
             when 'youtube#channel'
               channels << "#{search_result.snippet.title} (#{search_result.id.channelId})"
             when 'youtube#playlist'

@@ -244,6 +244,11 @@ progress[value]::-webkit-progress-value {
   display: flex;
 }
 
+#search .subtitle {
+  font-color: #aaaaaa;
+  font-size: 12px;
+}
+
 #search img.video-thumbnail {
   border: 1px solid white;
   border-radius: 4px;
