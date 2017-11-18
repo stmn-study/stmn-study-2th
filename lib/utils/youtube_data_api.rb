@@ -69,6 +69,7 @@ class YoutubeDataApi
       ]
     end
 
+    # ビデオ検索用
     def search(params = {})
       params = {q: nil, max_results: 25}.merge(params.symbolize_keys)
 
