@@ -25,7 +25,9 @@
               <li class="result_item">
                 <%= image_tag "http://i.ytimg.com/vi/#{result[:video_id]}/hqdefault.jpg", class: "video-thumbnail", size: "120x90" %>
                 <div class="video-description">
-                  <%= "#{result[:title]}" %>
+                  <div class="title">
+                    <%= "#{result[:title]}" %>
+                  </div>
                   <div class="subtitle">
                     <%= "#{result[:published_at]}" %>
                   </div>

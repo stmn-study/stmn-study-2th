@@ -198,7 +198,7 @@ progress[value]::-webkit-progress-value {
   width: 600px;
   margin: 20px;
   padding: 20px;
-  background-color: #e7e8e2;
+  background-color: #EEEEEE;
   border-radius: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -250,9 +250,16 @@ progress[value]::-webkit-progress-value {
   display: flex;
 }
 
+#search .title {
+  font-color: #aaaaaa;
+  font-size: 19px;
+  text-decoration:none;
+}
+
 #search .subtitle {
   font-color: #aaaaaa;
   font-size: 12px;
+  text-decoration:none;
 }
 
 #search img.video-thumbnail {
