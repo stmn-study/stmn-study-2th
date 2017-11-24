@@ -1,6 +1,4 @@
-require 'rubygems'
 require 'google/api_client'
-require 'trollop'
 
 class YoutubeDataApi
   DEVELOPER_KEY = Rails.application.secrets.youtube_data_api_key

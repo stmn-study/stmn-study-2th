@@ -9,7 +9,7 @@ end
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
 # Use mysql as the database for Active Record
-gem 'mysql2', '>= 0.3.18', '< 0.5'
+# gem 'mysql2', '>= 0.3.18', '< 0.5'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
@@ -30,7 +30,6 @@ gem 'jbuilder', '~> 2.5'
 
 # Google_api_client for Youtube_data_api
 gem 'google-api-client', '0.8'
-gem 'trollop'
 
 # JQuery
 gem 'jquery-rails'
