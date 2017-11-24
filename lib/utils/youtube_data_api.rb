@@ -21,17 +21,15 @@ class YoutubeDataApi
     end
 
     # ビデオ検索用
-    def search(params = {})
-      params = { q: nil, max_results: 25 }.merge(params.symbolize_keys)
-
+    def search(q: nil, max_results: 25)
       client, youtube = get_service
 
       search_response = client.execute!(
         api_method: youtube.search.list,
         parameters: {
           part: 'snippet',
-          q: params[:q],
-          maxResults: params[:max_results]
+          q: q,
+          maxResults: max_results
         }
       )
 
