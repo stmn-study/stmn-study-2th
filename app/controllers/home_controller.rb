@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def index
-    params[:q] ||= '組織エンゲージメントクラウド TUNAG'
+    params[:q] ||= 'suchmos'
     @results = YoutubeDataApi.search(q: params[:q], max_results: 25)
     @video_id = @results.first[:video_id]
 
